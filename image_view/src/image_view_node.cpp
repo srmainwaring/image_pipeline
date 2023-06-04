@@ -145,6 +145,9 @@ ImageViewNode::ImageViewNode(const rclcpp::NodeOptions & options)
 
   on_set_parameters_callback_handle_ = this->add_on_set_parameters_callback(
     std::bind(&ImageViewNode::paramCallback, this, std::placeholders::_1));
+
+  /// \todo macOS
+  // windowThread();
 }
 
 ImageViewNode::~ImageViewNode()
